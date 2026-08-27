@@ -1,0 +1,7 @@
+node_modules
+dist
+*.tsbuildinfo
+.DS_Store
+*.local
+.vite
+_to_delete
