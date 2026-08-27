@@ -230,7 +230,7 @@ input:focus, select:focus, button:focus-visible {
 
 .grid-cell { background: var(--surface); padding: 12px 14px; }
 .grid-cell dt { font-size: 0.75rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.04em; }
-.grid-cell dd { margin: 4px 0 0; font-size: 0.98rem; word-break: break-all; }
+.grid-cell dd { margin: 4px 0 0; font-size: 0.98rem; overflow-wrap: anywhere; }
 
 .mono { font-family: var(--mono); }
 .strong { font-weight: 600; }
@@ -419,7 +419,3 @@ td.binary-bits { font-family: var(--mono); white-space: nowrap; letter-spacing: 
   white-space: nowrap;
   border: 0;
 }
-
-/* Le chinois s'écrit sans espaces : `break-all` couperait les mots latins
-   d'une locale à l'autre, `anywhere` ne coupe que là où c'est nécessaire. */
-:root[lang^='zh'] .grid-cell dd { word-break: normal; overflow-wrap: anywhere; }
